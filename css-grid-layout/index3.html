@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css Grid Layout 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+            grid-gap: 1em;
+        }
+
+        .wrapper>div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+        }
+
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            grid-auto-rows: minmax(10px, auto);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+
+</html>

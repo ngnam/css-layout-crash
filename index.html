@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css Layout Crash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+        }
+
+        .wrapper>div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+        }
+
+        .wrapper>div>a {
+            height: 100px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div><a href="css-grid-layout/index.html">CSS Grid Layout - <span>grid with nested</span></a></div>
+        <div><a href="css-grid-layout/index2.html">CSS Grid Layout 2 - <span>grid-template-columns: repeat(3, 1fr);</span></a></div>
+        <div><a href="css-grid-layout/index3.html">CSS Grid Layout 3 -
+                <span>
+                    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+                </span></a></div>
+        <div><a href="css-grid-layout/index4.html">CSS Grid Layout 4</a></div>
+    </div>
+</body>
+
+</html>
