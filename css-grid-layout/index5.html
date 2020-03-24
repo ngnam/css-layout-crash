@@ -24,14 +24,25 @@
 }
 .fill-grid-rows-columns {
   border: 1px solid #ddd;
-  grid-column: 1;
-  grid-row: 1;
+  grid-row-start: auto;
+  grid-column-end: auto;
+  
 }
-    
+    header {
+        position: fixed;
+        top: 0;
+        padding: 10px;
+        height: 50px;
+        background: #f2f2f2;
+    }
+    header > input[type='date'] { width: 100%; }
 </style>
 </head>
 
 <body>
+<header>
+    <input type="date" name="currentDate" />
+</header>
 <div class="wrapper">
   <div class="fill-grid-rows-columns">1</div>
   <div class="fill-grid-rows-columns">2</div>
