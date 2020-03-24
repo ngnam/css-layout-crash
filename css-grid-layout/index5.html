@@ -13,32 +13,29 @@
   margin: 0;
 }
 .wrapper {
-  display: grid;
-  border-style: solid;
-  border-color: red;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 10px;
-  width: 100vw;
-  height: 100vh;
+    display: grid;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+    padding: 10px 10px 0;
 }
 .fill-grid-rows-columns {
-  border: 1px solid #ddd;
-  grid-row-start: auto;
-  grid-column-end: auto;
-  
+    border: 1px dotted #ddd;
+    grid-row-start: auto;
+    grid-column-end: auto;
+    background: #fff;
 }
-    .header {
-        width: 100%;
-        padding: 10px;
-        height: 50px;
-        background: #f2f2f2;
-    }
     .header > input[type='date'] { width: 100%; }
     
 .wrapper .fill-grid-rows-columns:first-child {
-  grid-column-start: 1;
-  grid-column-end: -1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    height: 50px;
+    padding: 10px;
 }
 </style>
 </head>
@@ -46,7 +43,9 @@
 <body>
 
 <div class="wrapper">
-  <div class="fill-grid-rows-columns">header</div>
+  <div class="fill-grid-rows-columns header">
+    <input type="date" name="current-date" />
+  </div>
   <div class="fill-grid-rows-columns">1</div>
   <div class="fill-grid-rows-columns">2</div>
   <div class="fill-grid-rows-columns">3</div>
