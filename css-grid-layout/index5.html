@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css Grid Layout</title>
+    <styles>
+    *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  display: grid;
+  border-style: solid;
+  border-color: red;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 100vw;
+  height: 100vh;
+}
+.fill-grid-rows-columns {
+  border: 1px solid #ddd;
+  grid-column: 1;
+  grid-row: 1;
+}
+    
+    </styles>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="fill-grid-rows-columns">1</div>
+  <div class="fill-grid-rows-columns">2</div>
+  <div class="fill-grid-rows-columns">3</div>
+  <div class="fill-grid-rows-columns">4</div>
+  <div class="fill-grid-rows-columns">5</div>
+  <div class="fill-grid-rows-columns">6</div>
+  <div class="fill-grid-rows-columns">7</div>
+  <div class="fill-grid-rows-columns">8</div>
+  <div class="fill-grid-rows-columns">9</div>
+  <div class="fill-grid-rows-columns">10</div>
+  <div class="fill-grid-rows-columns">11</div>
+  <div class="fill-grid-rows-columns">12</div>
+</div>
+</body>
+
+</html>
